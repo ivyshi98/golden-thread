@@ -28,7 +28,59 @@
             <ion-label floating>Confirm Password</ion-label>
             <ion-input type="password"></ion-input>
         </ion-item>
+
+        <ion-item>
+            <ion-label floating>Address</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Province/State</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Country</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
     </ion-list>
 
-    <button ion-button (click) = "navigateToProfile()">Sign up</button>
+    <ion-list>
+        <ion-list-header>
+            What types of charities are you interested in?
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>Animal</ion-label>
+            <ion-checkbox checked="false"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Enviromental</ion-label>
+            <ion-checkbox checked="false"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>International</ion-label>
+            <ion-checkbox checked="false"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Health</ion-label>
+            <ion-checkbox checked="false"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Education</ion-label>
+            <ion-checkbox checked="false"></ion-checkbox>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label>Arts</ion-label>
+            <ion-checkbox checked="false"></ion-checkbox>
+        </ion-item>
+    </ion-list>
+        <button ion-button (click)="navigateToProfile()">Sign up</button>
 </ion-content>
