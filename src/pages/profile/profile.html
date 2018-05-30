@@ -8,7 +8,18 @@
 
 <ion-content padding>
     <p>
-        Welcome to the profile page
+    Welcome to the profile page
+    
+    This is your username:
+    {{username}}
+    This is your password:
+    {{password}}
+
     </p>
-    <button ion-button (click) = "navigateToHome()">Logout</button>
+
+    
+    <button ion-button round icon-start (click) = "navigateToHome()">
+        <ion-icon name="home"></ion-icon>
+
+        Logout</button>
 </ion-content>
