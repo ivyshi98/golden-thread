@@ -1,0 +1,32 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Operation Smile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    
+    <p>
+        <button ion-button color="light" icon-start (click)="backToCharitylist()">
+          <ion-icon name='arrow-back'></ion-icon>
+          Back
+        </button>
+    
+        <button ion-button color="light" icon-end>
+          Next
+          <ion-icon name='arrow-forward'></ion-icon>
+        </button>
+    </p>
+    <p>
+        This is your charity:
+        {{item}}
+     
+    </p>
+    
+
+</ion-content>

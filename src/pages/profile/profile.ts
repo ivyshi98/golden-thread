@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { CharitylistPage} from '../charitylist/charitylist'
 
 
 @Component({
@@ -24,6 +25,10 @@ export class ProfilePage {
     navigateToHome(){
         this.navCtrl.popToRoot();
         /*Show data*/
+    }
+    
+    navigateToExplore(){
+        this.navCtrl.push(CharitylistPage);
     }
 
 }
