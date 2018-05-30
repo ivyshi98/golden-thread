@@ -15,13 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CharitydetailPage {
 
-  public item: string;
+  public charityname: any;
+  public charityinfo: any;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad(){
-    this.item = this.navParams.get("charityname");   
+    this.charityname = this.navParams.get("name");  
+    this.charityinfo = this.navParams.get("info") 
+
+
 }
   
   backToCharitylist(){
