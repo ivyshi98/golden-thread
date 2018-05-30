@@ -10,18 +10,13 @@
 
     <ion-list inset>
         <ion-item>
-            <ion-label floating>Last Name</ion-label>
-            <ion-input type="text"></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label floating>First Name</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text" [(ngModel)] ="username"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Password</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-input type="password" [(ngModel)] ="password"></ion-input>
         </ion-item>
 
         <ion-item>
@@ -82,5 +77,7 @@
             <ion-checkbox checked="false"></ion-checkbox>
         </ion-item>
     </ion-list>
+    <div class = "button">
         <button ion-button round (click)="navigateToProfile()">Sign up</button>
+    </div>
 </ion-content>

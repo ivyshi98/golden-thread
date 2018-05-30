@@ -6,20 +6,28 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <p>
-    Welcome to the profile page
-    
-    This is your username:
-    {{username}}
-    This is your password:
-    {{password}}
-
-    </p>
-
-    
-    <button ion-button round icon-start (click) = "navigateToHome()">
-        <ion-icon name="home"></ion-icon>Logout</button>
-    <br>
+<ion-content padding> 
+<div class = "topbar">
     <button ion-button icon-start (click) = "navigateToExplore()">Explore charities</button>
+ 
+    <button ion-button color = "light" round icon-start (click) = "navigateToHome()">
+            <ion-icon name="home"></ion-icon>Logout</button>
+</div>
+
+<img class="profile-image" width="37%" height="20%" src="../../assets/imgs/profile.png">
+
+
+<ion-list>
+    Username
+   <ion-item>
+      {{username}}
+   </ion-item>
+    
+   Password
+   <ion-item>
+      {{password}}
+   </ion-item>
+
+</ion-list>
+
 </ion-content>

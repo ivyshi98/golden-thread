@@ -1,32 +1,32 @@
-
 <ion-header>
-
   <ion-navbar>
     <ion-title>{{charityname}}</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
 
-    
-    <p>
-        <button ion-button color="light" icon-start (click)="backToCharitylist()">
-          <ion-icon name='arrow-back'></ion-icon>
-          Back
-        </button>
-    
-        <button ion-button color="light" icon-end>
-          Next
-          <ion-icon name='arrow-forward'></ion-icon>
-        </button>
-    </p>
-    <p>
-        
-        {{charityinfo}}
-     
-    </p>
-    
+  <p class = "topbar">
+    <button ion-button color="light" icon-start>
+      <ion-icon name='arrow-back'></ion-icon>
+      Back
+    </button>
+
+    <button ion-button color="light" icon-end>
+      Next
+      <ion-icon name='arrow-forward'></ion-icon>
+    </button>
+
+    <button ion-button icon-only>
+        <ion-icon name="star"></ion-icon>
+      </button>
+  </p>
+  <p class = "info">
+
+    {{charityinfo}}
+
+  </p>
+
 
 </ion-content>
