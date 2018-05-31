@@ -22,12 +22,13 @@ export class PortfolioPage {
 
   barChart: any;
   doughnutChart: any;
-
+  amount: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
+    this.amount = this.navParams.get("amount");
  
     this.barChart = new Chart(this.barCanvas.nativeElement, {
 

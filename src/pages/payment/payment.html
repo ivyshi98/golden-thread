@@ -9,12 +9,13 @@
 
 
 <ion-content padding>
+    
     <ion-list>
         <ion-item-divider>
             Payment Type
         </ion-item-divider>
         <ion-item>
-          <ion-label>One Time Payment</ion-label>
+          <ion-label>One Time Payment {{paymentcharity}}</ion-label>
           <ion-checkbox [(ngModel)]="onetime"></ion-checkbox>
         </ion-item>
       
@@ -23,6 +24,15 @@
           <ion-checkbox [(ngModel)]="subscription"></ion-checkbox>
         </ion-item>
         <br>
+
+        <ion-item-divider>
+            Payment Amount
+        </ion-item-divider>
+        <ion-item>
+            <ion-input type="text" placeholder= "Amount" [(ngModel)] ="amount"></ion-input>
+          </ion-item>
+          <br>
+
         <ion-item-divider>
             Payment Information
         </ion-item-divider>
@@ -42,7 +52,7 @@
           </ion-item>
     </ion-list>
     <div text-center>
-        <button ion-button>Confirm</button>
+        <button ion-button (click) = "navigateToProfile()">Confirm</button>
     </div>
    
 </ion-content>
