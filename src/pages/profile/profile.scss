@@ -1,19 +1,15 @@
 page-profile {
     width: 50%;
     text-align: center;
+    
+    .profile-image{
+        margin-top:10%;
+        margin-bottom:10%;
+    }
+    
+    ion-list{
+        padding:block;
+        margin:auto;
+    }
 }
 
-.topbar{
-    margin-top: -5%;
-}
-
-.profile-image{
-    margin-top:10%;
-    margin-bottom:10%;
-}
-
-ion-list{
-    text-align: center;
-    padding:block;
-    margin:auto;
-}

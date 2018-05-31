@@ -1,0 +1,48 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item-divider>
+            Payment Type
+        </ion-item-divider>
+        <ion-item>
+          <ion-label>One Time Payment</ion-label>
+          <ion-checkbox [(ngModel)]="onetime"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Subscription Payment</ion-label>
+          <ion-checkbox [(ngModel)]="subscription"></ion-checkbox>
+        </ion-item>
+        <br>
+        <ion-item-divider>
+            Payment Information
+        </ion-item-divider>
+
+        <ion-item>
+        <ion-input type="text" placeholder= "Name On Card"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input type="text" placeholder= "Card Number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder= "Expire Date"></ion-input>
+          </ion-item>
+        <ion-item>
+            <ion-input type="text" placeholder= "CVV"></ion-input>
+          </ion-item>
+    </ion-list>
+    <div text-center>
+        <button ion-button>Confirm</button>
+    </div>
+   
+</ion-content>

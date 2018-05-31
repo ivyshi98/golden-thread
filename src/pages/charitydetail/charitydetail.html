@@ -6,6 +6,19 @@
 
 
 <ion-content padding>
+  <div class = "profileimg">
+    <ion-img height= "150px" width = "150px"src={{charitylogo}}></ion-img>
+  </div>
+
+    <p class = "info">
+       {{charityinfo}}
+       <br>
+       <br>
+       <button ion-button (click)= "navigateToPayment()">Donate</button>
+    </p>
+  
+  
+  
 
   <p class = "topbar">
     <button ion-button color="light" icon-start>
@@ -22,11 +35,8 @@
         <ion-icon name="star"></ion-icon>
       </button>
   </p>
-  <p class = "info">
-
-    {{charityinfo}}
-
-  </p>
+  
+  
 
 
 </ion-content>

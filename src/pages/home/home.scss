@@ -1,15 +1,26 @@
 page-home {
     width: 50%;
     text-align: center;
+
+    .header{
+        padding-top: 20%;
+        font-size: 500%;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .login{
+        padding:15%;
+        padding-bottom:0%;
+    }
+
+    .button{
+        margin-top:10%;
+    
+    }
+    
+    ion-img{
+        display: block;
+        margin: auto;
+        margin-top:35%;
+    }
 }
 
-.button{
-    margin-top:10%;
-
-}
-
-ion-img{
-    display: block;
-    margin: auto;
-    margin-top:35%;
-}

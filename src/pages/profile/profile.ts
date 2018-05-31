@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CharitylistPage} from '../charitylist/charitylist'
-
+import { PortfolioPage } from '../portfolio/portfolio';
 
 @Component({
     selector: 'page-profile',
@@ -30,5 +30,9 @@ export class ProfilePage {
     navigateToExplore(){
         this.navCtrl.push(CharitylistPage);
     }
+
+    navigateToPortfolio(){
+        this.navCtrl.push(PortfolioPage);
+      }
 
 }

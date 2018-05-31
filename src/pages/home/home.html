@@ -1,17 +1,25 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+
 
 <ion-content padding>
-  <ion-img width="80%" height="15%" src='../../assets/imgs/charity.jpg'></ion-img>
+  <div class = "header">Crypto Safari</div>
+  <br>
+  <ion-list class = "login">
+  
+      <ion-item>
+        <ion-input type="text" placeholder = "username" [(ngModel)] ="username"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input type="password" placeholder = "password" [(ngModel)] ="password"></ion-input>
+      </ion-item>
+  
+    </ion-list>
+    <button ion-button round color = "light" (click) = "navigateToProfile()">Login</button>
+
   <br>
   <div class = "button">
-  <button ion-button round color = "light" (click) = "navigateToLogin()">Login</button>
-  <br>
-  <button ion-button round (click) = "navigateToRegistration()">Registration</button>
+  
+  
+  <button ion-button round color = "orange" (click) = "navigateToRegistration()">Registration</button>
   </div>
 </ion-content>

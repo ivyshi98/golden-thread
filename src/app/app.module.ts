@@ -11,6 +11,8 @@ import { RegistrationPage } from '../pages/registration/registration';
 import { ProfilePage } from '../pages/profile/profile';
 import { CharitylistPage } from '../pages/charitylist/charitylist';
 import { CharitydetailPage } from '../pages/charitydetail/charitydetail';
+import { PortfolioPage } from '../pages/portfolio/portfolio';
+import { PaymentPage } from '../pages/payment/payment';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CharitydetailPage } from '../pages/charitydetail/charitydetail';
     RegistrationPage,
     ProfilePage,
     CharitylistPage,
-    CharitydetailPage
+    CharitydetailPage,
+    PortfolioPage,
+    PaymentPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,9 @@ import { CharitydetailPage } from '../pages/charitydetail/charitydetail';
     RegistrationPage,
     ProfilePage,
     CharitylistPage,
-    CharitydetailPage
+    CharitydetailPage,
+    PortfolioPage,
+    PaymentPage
 
   ],
   providers: [
