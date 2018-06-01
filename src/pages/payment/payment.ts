@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PortfolioPage } from '../portfolio/portfolio';
+import { Charity } from '../../models/charity';
 
 /**
  * Generated class for the PaymentPage page.
@@ -17,20 +18,21 @@ import { PortfolioPage } from '../portfolio/portfolio';
 export class PaymentPage {
 
   public amount: string;
-  public paymentcharity: any;
+  public charitychosen: Charity;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.charitychosen = this.navParams.get("charity"); 
   }
 
   ionViewDidLoad() {
-    this.paymentcharity = this.navParams.get("name"); 
-    
+    console.log("ionViewDidLoad PaymentPage")
   }
 
-  navigateToProfile(){
+  navigateToProfile(charity: Charity, amount: string){
     this.navCtrl.push(PortfolioPage,{
-      amount:this.amount,
-      charityname: this.paymentcharity,
+      charity:this.charitychosen,
+      amount:this.amount
+   
     });
   }
 }

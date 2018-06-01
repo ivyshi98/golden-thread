@@ -10,6 +10,7 @@ import { PortfolioPage } from '../portfolio/portfolio';
 export class ProfilePage {
         public username: string;
         public password: string;
+     
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {
         
@@ -18,7 +19,8 @@ export class ProfilePage {
 
     ionViewDidLoad(){
         this.username = this.navParams.get("username");
-        this.password = this.navParams.get("password")
+        this.password = this.navParams.get("password");
+ 
         
     }
 

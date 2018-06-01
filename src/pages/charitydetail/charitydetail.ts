@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PaymentPage } from '../payment/payment';
+import { Charity } from '../../models/charity';
 
 
 /**
@@ -17,28 +18,28 @@ import { PaymentPage } from '../payment/payment';
 })
 export class CharitydetailPage {
 
-  public charityname: any;
-  public charityinfo: any;
-  public charitylogo: any;
+  public charitydetail: Charity;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+     this.charitydetail = this.navParams.get("charity");
   }
 
+
   ionViewDidLoad(){
-    this.charityname = this.navParams.get("name");  
-    this.charityinfo = this.navParams.get("info") 
-    this.charitylogo = this.navParams.get("logo")
-
-
-}
+    console.log("ionViewDidLoad CharitydetailPage");
+   
+  }
   
   backToCharitylist(){
     this.navCtrl.pop();
   }
 
-  navigateToPayment(){
-    this.navCtrl.push(PaymentPage);
+  navigateToPayment(charity: Charity){
+    this.navCtrl.push(PaymentPage,{
+      charity:this.charitydetail,
+    });
   }
+
 
 }

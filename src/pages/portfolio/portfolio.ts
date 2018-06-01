@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Chart } from 'chart.js';
+import { Charity } from '../../models/charity';
 
 /**
  * Generated class for the PortfolioPage page.
@@ -23,24 +24,27 @@ export class PortfolioPage {
   barChart: any;
   doughnutChart: any;
   amount: any;
+  charitydonated: Charity;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.amount = this.navParams.get("amount");
+    this.charitydonated= this.navParams.get("charity");
   }
 
   ionViewDidLoad() {
-    this.amount = this.navParams.get("amount");
- 
+    console.log("ionViewDidLoad PortfolioPage")
+
     this.barChart = new Chart(this.barCanvas.nativeElement, {
 
         type: 'bar',
         data: {
-            labels: ["IWAF", "Greenpop", "Tears Animal Rescue", "International Animal Rescue", "Vets for Change"],
+            labels: [this.charitydonated.name, "Greenpop", "Tears Animal Rescue", "International Animal Rescue", "Vets for Change"],
             
             //Math.js for percentage calculation
             
             datasets: [{
-                label: 'Percent of donations',
-                data: [28, 19, 3, 5, 2],
+                label: 'Amount of Donations',
+                data: [this.amount, 19, 3, 5, 2],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -76,10 +80,10 @@ export class PortfolioPage {
  
       type: 'doughnut',
       data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          labels: [this.charitydonated.name, "Blue", "Yellow", "Green", "Purple", "Orange"],
           datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
+              label: 'Amount of Donations',
+              data: [this.amount, 19, 3, 5, 2, 3],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
