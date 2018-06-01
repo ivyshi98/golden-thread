@@ -12,11 +12,43 @@
   <ion-searchbar placeholder = "search bar currently not working" [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)">
   </ion-searchbar>
 
-  <ion-list inset>
-      <button ion-item *ngFor="let item of charities" (click)="navigateToProfile(item)">
+  <ion-card ion-item *ngFor="let item of charities">
+
+    <img src="../../assets/imgs/{{item.name}}.png"/>
+
+    <ion-card-content>
+      <ion-card-title>
         {{ item.name }}
-      </button> 
-  </ion-list>
+      </ion-card-title>
+      <p>
+        {{item.info}}
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button (click)="navigateToPayment(item)" clear small color="danger" icon-start>
+          Donate
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button (click)="navigateToProfile(item)" clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Details
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+
+ 
 
 </ion-content>
 
